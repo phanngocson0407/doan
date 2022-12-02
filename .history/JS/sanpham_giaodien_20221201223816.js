@@ -17,7 +17,7 @@ function show_sanpham() {
                 <li>
                 <div class="product-item" >
                   <div class="product-top">
-                    <a href="chitietsp.html" class="product-thumb">
+                    <a href="" class="product-thumb">
                       <img height="50px" width="100%" class="img-fist" src="${
                         link_web + item.img_sp
                       }" />
@@ -29,8 +29,8 @@ function show_sanpham() {
           item.chat_lieu
         }– ${item.masanpham}</a>
                     <div>
-                      <p class="product-price">${item.gia}đ</p>
-                      <a href="" class="product-more">MUA NGAY</a>
+                      <p class="product-price">${item.gia}</p>
+                      <a href="" class="product-more">LỰA CHỌN CÁC TÙY CHỌN</a>
                     </div>
                   </div>
                 </div>

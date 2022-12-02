@@ -17,7 +17,7 @@ function show_sanpham() {
                 <li>
                 <div class="product-item" >
                   <div class="product-top">
-                    <a href="chitietsp.html" class="product-thumb">
+                    <a href="" class="product-thumb">
                       <img height="50px" width="100%" class="img-fist" src="${
                         link_web + item.img_sp
                       }" />
