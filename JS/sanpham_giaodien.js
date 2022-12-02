@@ -1,4 +1,4 @@
-let link_web="http://localhost/doan2/";
+let link_web="http://localhost/doan/";
 function show_sanpham()
 {
     $.ajax({

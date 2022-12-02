@@ -1,4 +1,4 @@
-let link_web="http://localhost/doan2/";
+let link_web="http://localhost/doan/";
 var _id_sp="";
 function select_img(id,item) {
     var fileInput = document.getElementById(id);
