@@ -1,0 +1,51 @@
+.product_amount input {
+  width: 40px;
+  text-align: center;
+}
+.border {
+  border-top: #d38566 solid 5px;
+  width: 100%;
+  margin: 15px 0;
+}
+.product_amount button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.product_amount button:hover {
+  background-color: #cccccc;
+}
+.content {
+  display: block;
+  margin: 0 165px;
+  padding: 20px 0;
+}
+.product {
+  display: flex;
+}
+.product,
+.product_form {
+  margin-left: 30px;
+}
+.product_name {
+  color: #d38566;
+  font-weight: 700;
+  position: relative;
+}
+.product_price {
+  font-weight: 700;
+  color: #000;
+  font-size: 25px;
+  text-align: center;
+}
+.margin15 {
+  margin: 35px 0;
+}
+.product_color {
+  display: flex;
+}
+.color_more {
+  margin-left: 20px;
+  width: 100%;
+  text-align: center;
+}

@@ -1,0 +1,10 @@
+.product_amount input {
+  width: 20px;
+}
+.product_amount button {
+  cursor: pointer;
+  outline: none;
+}
+.product_amount button:hover {
+  background-color: #33333;
+}

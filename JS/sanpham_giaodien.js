@@ -1,3 +1,4 @@
+
 let link_web="http://localhost/doan/";
 function show_sanpham()
 {
@@ -18,26 +19,26 @@ function show_sanpham()
                 <li>
                 <div class="product-item" >
                   <div class="product-top">
-                    <a href="" class="product-thumb">
-                      <img height="50px" width="100%" class="img-fist" src="${link_web+item.img_sp}" />
+                    <a href="chitietsp.php?id=${item.id_sp}" class="product-thumb">
+                      <img height="50px" width="100%" class="img-fist" src="${link_web + item.img_sp}" />
                     </a>
                     <a href="" class="buynow">XEM NHANH</a>
                   </div>
                   <div class="product-info">
                     <a href="" class="product-name">${item.tensanpham}-${item.chat_lieu}– ${item.masanpham}</a>
                     <div>
-                      <p class="product-price">${item.gia}</p>
-                      <a href="" class="product-more">LỰA CHỌN CÁC TÙY CHỌN</a>
+                      <p class="product-price">${item.gia}đ</p>
+                      <a href="" class="product-more">MUA NGAY</a>
                     </div>
                   </div>
                 </div>
               </li>
                 `;
-            });
-            $("#content_sanpham").html(output)
-        }
-    })
+      });
+      $("#content_sanpham").html(output);
+    },
+  });
 }
-$(document).ready(function() {
-    show_sanpham();
+$(document).ready(function () {
+  show_sanpham();
 });

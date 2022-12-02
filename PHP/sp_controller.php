@@ -167,7 +167,7 @@ switch($loaiquanly)
         if(isset($_REQUEST['id_sp']) AND !empty($_REQUEST['id_sp']))
         {
             $id_sp=$_REQUEST['id_sp'];
-            $sql=" AND id='$id_sp'";
+            $sql.=" AND id='$id_sp'";
         }
 
         $result = db_qr($sql);

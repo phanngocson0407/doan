@@ -1,0 +1,18 @@
+.product_amount input {
+  width: 40px;
+  text-align: center;
+}
+.product_amount button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.product_amount button:hover {
+  background-color: #cccccc;
+}
+.container_name {
+  display: inline;
+}
+.product {
+  display: flex;
+}
