@@ -81,7 +81,7 @@
         </nav>
       </header>
       <div class="content" id="chitiet_sp">
-        <form action="cart.html" >
+        <form action="" >
           <div class="product" >
             <div class="product_img">
               <img src="../images/sanpham/hmk-03-1.jpg" alt="03" />

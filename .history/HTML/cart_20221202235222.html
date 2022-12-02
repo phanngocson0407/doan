@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CSS/CN_BanHang.css" />
-    <link rel="stylesheet" href="../CSS/sanpham.css" />
+    <link rel="stylesheet" href="../CSS/cart.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -21,8 +21,6 @@
     <title>Document</title>
   </head>
   <body>
-    <?php $id_sp=$_GET['id']; ?>
-    <input type="hidden" id="id_sp" value="<?php echo $id_sp ?>">
     <div id="main">
       <header id="header">
         <nav class="container">
@@ -71,50 +69,49 @@
             <a href="../HTML/dangnhap.php" class="user js-btn-user">
               <i class="fa-solid fa-user"></i>
             </a>
-            <a class="cart" href="cart.html"
+            <a class="cart" href="#"
               ><i class="fa-solid fa-cart-shopping"></i>
-              <ul class="cart_more">
-                <li>Chưa có sản phẩm nào trong giỏ hàng</li>
-              </ul>
             </a>
           </div>
         </nav>
       </header>
-      <div class="content" id="chitiet_sp">
-        <form action="cart.html" >
-          <div class="product" >
-            <div class="product_img">
-              <img src="../images/sanpham/hmk-03-1.jpg" alt="03" />
-            </div>
-            <div class="product_form">
-              <div class="product_name">
-                <h1>Mắt kính cận-kinh loại– HMK15</h1>
-              </div>
-              <div class="border"></div>
-
-              <div class="product_price margin15"><p>Giá: 100000đ</p></div>
-
-              <div class="product_color margin15">
-                <p>Màu sắc</p>
-                <select name="" id="" class="color_more">
-                  <option value="hong">Hồng</option>
-                  <option value="bac">Bạc</option>
-                  <option value="den">Đen</option>
-                </select>
-              </div>
-              <div class="product_amount margin15">
-                <button class="minus_btn" onclick="handleMinus()">
-                  <i class="fa-solid fa-minus"></i>
-                </button>
-                <input type="text" name="amount" id="amount" value="1" />
-                <button class="plus_btn" onclick="handlePlus()">
-                  <i class="fa-solid fa-plus"></i>
-                </button>
-              </div>
-              <button class="btn_them" type="submit">THÊM VÀO GIỎ HÀNG</button>
-            </div>
+      <div class="shopping_cart">
+        <div class="cart_none">
+          <p>Chưa có sản phẩm nào trong giỏ hàng.</p>
+          <a href="Project_CN_BanHang.html">Quay trở lại trang chủ</a>
+        </div>
+        <div class="cart">
+          <div class="cart_name">
+            <h2>SHOPPING CART</h2>
           </div>
-        </form>
+          <div class="cart_table">
+            <table border="1">
+              <thead>
+                <td>SẢN PHẨM</td>
+                <td>GIÁ</td>
+                <td>SỐ LƯỢNG</td>
+                <td>TẠM TÍNH</td>
+              </thead>
+              <tbody>
+                <td>
+                  <img src="../images/sanpham/hmk-03-1.jpg" alt="03" />
+                  <p>Kính Mát KM72019 - ĐEN KHÓI</p>
+                </td>
+                <td>123213</td>
+                <td>
+                  <button class="minus_btn" onclick="handleMinus()">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <input type="text" name="amount" id="amount" value="1" />
+                  <button class="plus_btn" onclick="handlePlus()">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </td>
+                <td></td>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
       <footer>
         <ul class="footer-list">
@@ -201,7 +198,5 @@
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
     <script src="..//JS/CN_BanHang.js"></script>
-    <script src="../JS/amount.js"></script>
-    <script src="../JS/sanpham_chitiet.js?v2"></script>
   </body>
 </html>

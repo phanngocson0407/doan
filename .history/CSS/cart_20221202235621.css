@@ -34,10 +34,10 @@
 }
 .cart_table tbody td img,
 p {
-  display: inline;
+  display: flex;
 }
 .cart_table tbody td img p {
-  display: block;
+  display: inline;
   justify-content: center;
   align-items: center;
 }

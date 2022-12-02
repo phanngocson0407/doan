@@ -1,0 +1,22 @@
+.cart_none {
+  text-align: center;
+  margin: 100px 165px;
+  display: none;
+}
+.cart_none p {
+  color: #d38566;
+  margin-bottom: 50px;
+}
+.cart_none a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #d38566;
+  padding: 10px;
+  font-weight: 600;
+}
+.cart_none a:hover {
+  opacity: 0.8;
+}
+.cart {
+  margin: 0 165px;
+}

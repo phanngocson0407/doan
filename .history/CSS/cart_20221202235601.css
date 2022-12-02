@@ -37,7 +37,7 @@ p {
   display: inline;
 }
 .cart_table tbody td img p {
-  display: block;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
