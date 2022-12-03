@@ -1,7 +1,7 @@
 
 let link_web="http://localhost/doan/";
 var _id_sp="";
-function select_img(id,item) {
+function select_img(id,item) {  
     var fileInput = document.getElementById(id);
     var filePath = fileInput.value; //lấy giá trị input theo id
     var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i; //các tập tin cho phép
@@ -18,7 +18,6 @@ function select_img(id,item) {
                 document.getElementById(item).innerHTML = '<img style="width:100%;height:120px;" src="' + e.target.result + '"/>';
             };
             reader.readAsDataURL(fileInput.files[0]);
-
       // $('#'+info).html((fileInput.files[0].length > 1) ? fileInput.files[0].length + ' files' : fileInput.files[0].name)
     }
   }
@@ -41,7 +40,7 @@ function show_sanpham() {
         output += `
                 <tr>
                     <td>${k + 1}</td>
-                    <td><img style="width:100%;height:120px;" src="${
+                    <td><img style="width:100%;height:120px;object-fit: cover;" src="${
                       link_web + item.img_sp
                     }"/></td>
                     <td>${item.masanpham}</td>
@@ -128,8 +127,8 @@ function hien_thongtin_suasanpham(id_sp, ma, ten, gia, chat_lieu, img_sp) {
   $("#edit_tensanpham").val(ten);
   $("#edit_gia").val(gia);
   $("#edit_chat_lieu").val(chat_lieu);
-  $("#edit_hinh_sanpham").val(img_sp);
-
+  $("#edit_hinh_sanpham").val('../'.img_sp);
+  
   _id_sp = id_sp;
 }
 

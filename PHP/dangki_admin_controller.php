@@ -47,7 +47,6 @@ else{
 }
 
 
-
 $sql="INSERT INTO admin
     SET 
     ten_admin='$ten_admin',

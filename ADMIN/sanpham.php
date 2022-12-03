@@ -202,7 +202,6 @@
       </div>
       <div class="modal-body">
       <form action="../PHP/sp_controller.php" method="post">
-
           <input
             type="text"
             placeholder="Mã sản phẩm"

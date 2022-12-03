@@ -95,6 +95,7 @@ switch($loaiquanly)
         echo json_encode($arr);
         break;
     }
+    
     case "update":{
         if(isset($_REQUEST['id_sp']) AND !empty($_REQUEST['id_sp']))
         {
@@ -199,4 +200,3 @@ switch($loaiquanly)
         break;
     }
 }
-
