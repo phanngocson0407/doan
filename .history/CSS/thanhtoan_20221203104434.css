@@ -1,0 +1,32 @@
+.checkout {
+  margin: 0 165px;
+}
+.border {
+  border-top: #d38566 solid 2px;
+  width: 100%;
+  margin: 35px 0;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: none;
+}
+.info_customer p label,
+span {
+  display: block;
+}
+
+element.style {
+}
+.button,
+button,
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1em;
+}
+textarea {
+  padding-top: 0.7em;
+  min-height: 120px;
+}

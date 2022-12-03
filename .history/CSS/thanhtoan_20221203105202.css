@@ -1,0 +1,30 @@
+.checkout {
+  margin: 0 165px;
+}
+.border {
+  border-top: #d38566 solid 2px;
+  width: 100%;
+  margin: 35px 0;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: none;
+}
+.info_customer p label,
+span {
+  display: block;
+}
+.info_customer p span {
+  width: 100%;
+}
+
+textarea {
+  padding-top: 0.7em;
+  min-height: 120px;
+}
+.oder p label,
+textarea {
+  display: block;
+  margin-top: 4px;
+}
