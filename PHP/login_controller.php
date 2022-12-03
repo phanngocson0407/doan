@@ -17,7 +17,7 @@ else{
     return  header("Location: ../HTML/dangnhap.php");
 }
 
- 
+
 
 $sql="SELECT * 
         FROM user WHERE username='$username' AND password='$password'
