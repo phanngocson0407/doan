@@ -44,44 +44,8 @@ p {
 .cart_table tbody td p {
   padding-top: 25px;
 }
-table {
-  border-bottom: #cccccc 2px solid;
-}
 .back_product,
 .thanhtoan {
   display: inline;
-
-  margin: 20px 40px;
-}
-.back_product a {
-  text-decoration: none;
-  padding: 10px;
-  border: #d38566 solid 1px;
-  color: #d38566;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 16px;
-}
-.back_product a:hover {
-  background-color: #d38566;
-  color: #fff;
-}
-.back_product a i {
-  margin-right: 10px;
-}
-.thanhtoan {
-  padding: 10px;
-  border: #d38566 solid 1px;
-  color: #d38566;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 16px;
-  background-color: #fff;
-}
-.thanhtoan:hover {
-  background-color: #d38566;
-  color: #fff;
-}
-.shopping_cart {
-  margin: 100px 0;
+  margin-left: 20px;
 }

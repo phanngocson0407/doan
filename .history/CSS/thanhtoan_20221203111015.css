@@ -1,0 +1,44 @@
+.checkout {
+  margin: 0 165px;
+}
+.border {
+  border-top: #d38566 solid 2px;
+  width: 100%;
+  margin: 35px 0;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: none;
+}
+.info_customer p label,
+span {
+  display: block;
+  margin: 5px 0;
+}
+.info_customer p span input {
+  width: 40%;
+  outline: none;
+}
+.info_customer p {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+textarea {
+  padding-top: 0.7em;
+  min-height: 120px;
+}
+.oder p label,
+textarea {
+  display: block;
+  margin-top: 4px;
+}
+
+.info_customer {
+  clear: both;
+}
+.info_product,
+.info_customer {
+  display: flex;
+}

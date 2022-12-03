@@ -26,7 +26,7 @@ function show_sanpham() {
                     </a>
                     <a href="chitietsp.php?id=${
                       item.id_sp
-                    }"  " class="buynow">XEM NHANH</a>
+                    }" class="product-thumb"" class="buynow">XEM NHANH</a>
                   </div>
                   <div class="product-info">
                     <a href="" class="product-name">${item.tensanpham}-${
@@ -36,7 +36,7 @@ function show_sanpham() {
                       <p class="product-price">${item.gia}đ</p>
                       <a href="chitietsp.php?id=${
                         item.id_sp
-                      }"  " class="product-more">MUA NGAY</a>
+                      }" class="product-thumb"" class="product-more">MUA NGAY</a>
                     </div>
                   </div>
                 </div>

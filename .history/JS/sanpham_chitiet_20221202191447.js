@@ -1,34 +1,34 @@
-let link_web = "http://localhost/doan/";
-function show_sanpham() {
-  $.ajax({
-    url: "../PHP/sp_controller.php",
-    type: "POST",
-    data: {
-      loaiquanly: "list_sp",
-      id_sp: $("#id_sp").val(),
-    },
-    dataType: "json",
-    headers: {
-      Authorization: "Basic ",
-    },
-    success: function (response) {
-      console.log(response);
-      let output = "";
-      $.each(response, function (k, item) {
-        output += `
+
+let link_web="http://localhost/doan/";
+function show_sanpham()
+{
+    $.ajax({
+        url: "../PHP/sp_controller.php",
+        type: 'POST',
+        data: {
+            loaiquanly:"list_sp",
+            id_sp:$("#id_sp").val()
+        },
+        dataType: 'json',
+        headers: {
+        "Authorization": "Basic "
+        },
+        success: function(response) {
+            console.log(response);
+            let output=""; 
+            $.each(response, function(k, item) {
+                output += `
             <div class="content_name">
                 <h2>Chi tiết sản phẩm</h2>
             </div>
-            <form action="../HTML/cart.html" >
+            <form action="" >
             <div class="product" >
                 <div class="product_img">
                 <img src="${link_web + item.img_sp}" alt="03" />
                 </div>
                 <div class="product_form">
                 <div class="product_name">
-                    <h1>${item.tensanpham}-${item.chat_lieu}– ${
-          item.masanpham
-        }</h1>
+                    <h1>${item.tensanpham}-${item.chat_lieu}– ${item.masanpham}</h1>
                 </div>
                 <div class="border"></div>
 
@@ -42,7 +42,7 @@ function show_sanpham() {
                     <option value="den">Đen</option>
                     </select>
                 </div>
-                <button class="btn_them" type="submit"  >THÊM VÀO GIỎ HÀNG</button>
+                <button class="btn_them" type="submit">THÊM VÀO GIỎ HÀNG</button>
                 </div>
             </div>
             </form>
@@ -58,9 +58,7 @@ function show_sanpham() {
 
                 <ul>
                     <li>
-                    Gọng kính ${
-                      item.chat_lieu
-                    } tổng hợp chống gỉ sét. An toàn tuyệt đối.
+                    Gọng kính ${item.chat_lieu} tổng hợp chống gỉ sét. An toàn tuyệt đối.
                     </li>
                     <li>
                     Độ bền màu và tính đàn hồi cao. Ốc vặn được gia công kỹ lưỡng và

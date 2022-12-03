@@ -24,9 +24,7 @@ function show_sanpham() {
                         link_web + item.img_sp
                       }" />
                     </a>
-                    <a href="chitietsp.php?id=${
-                      item.id_sp
-                    }"  " class="buynow">XEM NHANH</a>
+                    <a href="" class="buynow">XEM NHANH</a>
                   </div>
                   <div class="product-info">
                     <a href="" class="product-name">${item.tensanpham}-${
@@ -34,9 +32,7 @@ function show_sanpham() {
         }– ${item.masanpham}</a>
                     <div>
                       <p class="product-price">${item.gia}đ</p>
-                      <a href="chitietsp.php?id=${
-                        item.id_sp
-                      }"  " class="product-more">MUA NGAY</a>
+                      <a href="chitietsp.php" class="product-more">MUA NGAY</a>
                     </div>
                   </div>
                 </div>

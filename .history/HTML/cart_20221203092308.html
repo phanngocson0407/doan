@@ -37,15 +37,13 @@
                 >
               </li>
               <li>
-                <a
-                  href="Project_CN_BanHang.html #product "
-                  class="sub_menu_name"
+                <a href="Project_CN_BanHang.html #product" class="sub_menu_name"
                   >Sản phẩm</a
                 >
               </li>
               <li>
                 <a
-                  href="Project_CN_BanHang.html  #post-list"
+                  href="Project_CN_BanHang.html #post-list"
                   class="sub_menu_name"
                   >Blog</a
                 >
@@ -71,11 +69,8 @@
             <a href="../HTML/dangnhap.php" class="user js-btn-user">
               <i class="fa-solid fa-user"></i>
             </a>
-            <a class="cart" href="cart.html"
+            <a class="cart" href="#"
               ><i class="fa-solid fa-cart-shopping"></i>
-              <ul class="cart_more">
-                <li>Chưa có sản phẩm nào trong giỏ hàng</li>
-              </ul>
             </a>
           </div>
         </nav>
@@ -85,13 +80,13 @@
           <p>Chưa có sản phẩm nào trong giỏ hàng.</p>
           <a href="Project_CN_BanHang.html">Quay trở lại trang chủ</a>
         </div>
-        <div class="cart_content">
+        <div class="cart">
           <div class="cart_name">
             <h2>SHOPPING CART</h2>
           </div>
           <div class="cart_table">
-            <form action="../HTML/thanhtoan.html">
-              <table cellspacing="10">
+            <form action="">
+              <table cellspacing="1" border="1">
                 <thead>
                   <tr>
                     <th>SẢN PHẨM</th>
@@ -107,25 +102,19 @@
                       <p>Kính Mát KM72019 - ĐEN KHÓI</p>
                     </td>
                     <td>123213</td>
-                    <td><input type="text" name="" id="" /></td>
-                    <td></td>
-                  </tr>
-
-                  <tr>
-                    <td>Tổng:</td>
+                    <td>
+                      <button class="minus_btn" onclick="handleMinus()">
+                        <i class="fa-solid fa-minus"></i>
+                      </button>
+                      <input type="text" name="amount" id="amount" value="1" />
+                      <button class="plus_btn" onclick="handlePlus()">
+                        <i class="fa-solid fa-plus"></i>
+                      </button>
+                    </td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
-              <div class="back_product">
-                <a href="Project_CN_BanHang.html #product "
-                  ><i class="fa-solid fa-arrow-left"></i>TIẾP TỤC XEM SẢN
-                  PHẨM</a
-                >
-              </div>
-              <button class="thanhtoan" type="submit">
-                TIẾN HÀNH THANH TOÁN
-              </button>
             </form>
           </div>
         </div>
@@ -215,5 +204,6 @@
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
     <script src="..//JS/CN_BanHang.js"></script>
+    <script src="../JS/amount.js"></script>
   </body>
 </html>
