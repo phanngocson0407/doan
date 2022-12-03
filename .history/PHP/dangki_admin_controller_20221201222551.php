@@ -1,5 +1,5 @@
 <?php
-
+//jjjlklklk
 include_once('connect_database.php');
 if(isset($_REQUEST['ten_admin']) AND !empty($_REQUEST['ten_admin']))
 {
@@ -45,6 +45,7 @@ else{
     $_SESSION['err']="Không được bỏ trống";
    return header("Location: ../ADMIN/dang_ki_admin.php");
 }
+
 
 
 $sql="INSERT INTO admin

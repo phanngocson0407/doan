@@ -57,7 +57,6 @@ $sql="INSERT INTO user
 ";
 if(mysqli_query($conn, $sql))
 {
-    $_SESSION['err']="";
     return header("Location: ../HTML/dangnhap.php");
 }
 else{

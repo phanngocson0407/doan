@@ -28,7 +28,7 @@
           <input
             type="text"
             placeholder="Số điện thoại"
-            name="phone"
+            name="phonenumber"
             class="margin-top20"
           />
           <input

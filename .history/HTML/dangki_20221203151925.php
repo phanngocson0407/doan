@@ -22,13 +22,13 @@
         <input
             type="text"
             placeholder="Tên khách hàng"
-            name="tenkhachhang"
+            name="namecustomer"
             class="margin-top20"
           />
           <input
             type="text"
             placeholder="Số điện thoại"
-            name="phone"
+            name="phonenumber"
             class="margin-top20"
           />
           <input
