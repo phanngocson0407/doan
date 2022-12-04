@@ -21,7 +21,7 @@
     <title>Document</title>
   </head>
   <body>
-    <?php $id_sp=$_GET['id'];  ?>
+    <?php $id_sp=$_GET['id']??"";  ?>
     <input type="hidden" id="id_sp" value="<?php echo $id_sp ?>">
     <div id="main">
       <header id="header">

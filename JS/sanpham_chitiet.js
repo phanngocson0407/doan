@@ -19,7 +19,7 @@ function show_sanpham() {
             <div class="content_name">
                 <h2>Chi tiết sản phẩm</h2>
             </div>
-            <form action="../HTML/cart.php" >
+            <form>
             <div class="product" >
                 <div class="product_img">
                 <img src="${link_web + item.img_sp}" alt="03" />
@@ -42,7 +42,7 @@ function show_sanpham() {
                     <option value="den">Đen</option>
                     </select>
                 </div>
-                <button class="btn_them" type="submit"  >THÊM VÀO GIỎ HÀNG</button>
+                <a href="../HTML/cart.php?id=${item.id_sp}" class="btn_them">THÊM VÀO GIỎ HÀNG</a>
                 </div>
             </div>
             </form>
@@ -52,7 +52,7 @@ function show_sanpham() {
                 <h2>Mô tả</h2>
                 </div>
                 <div class="description_info">
-                <p>– Tên sản phẩm: <b>${item.tensanpham}</b></p>
+                <p >– Tên sản phẩm: <b>${item.tensanpham}</b></p>
                 <p>– Mã sản phẩm: <b>${item.masanpham}</b></p>
                 <p>– Chất liệu: <b> ${item.chat_lieu}</b></p>
 
