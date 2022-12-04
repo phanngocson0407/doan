@@ -19,7 +19,7 @@ function show_sanpham() {
             <div class="content_name">
                 <h2>Chi tiết sản phẩm</h2>
             </div>
-            <form action="../HTML/cart.php" >
+            <form action="#" >
             <div class="product" >
                 <div class="product_img">
                 <img src="${link_web + item.img_sp}" alt="03" />

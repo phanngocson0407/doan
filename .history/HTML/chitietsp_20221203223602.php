@@ -81,7 +81,7 @@
         </nav>
       </header>
       <div class="content" id="chitiet_sp">
-        <form action="../HTML/cart.php" >
+        <form action="cart.html" >
           <div class="product" >
             <div class="product_img">
               <img src="../images/sanpham/hmk-03-1.jpg" alt="03" />
@@ -202,6 +202,6 @@
     ></script>
     <script src="..//JS/CN_BanHang.js"></script>
     <script src="../JS/amount.js"></script>
-    <script src="../JS/sanpham_chitiet.js?v4"></script>
+    <script src="../JS/sanpham_chitiet.js?v2"></script>
   </body>
 </html>

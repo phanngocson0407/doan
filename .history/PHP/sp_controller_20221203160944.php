@@ -184,7 +184,7 @@ switch($loaiquanly)
                     "tensanpham"=>$row['tensanpham'],
                     "gia"=>$row['gia'],
                     "chat_lieu"=>$row['chat_lieu'],
-                    "img_sp"=>$row['img_sp']  
+                    "img_sp"=>$row['img_sp']
                 
                 ];
                 $arr[]=$item;
