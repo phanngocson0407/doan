@@ -53,9 +53,9 @@ function show_sanpham() {
               PHẨM</a
             >
           </div>
-          <a class="thanhtoan_cart" href="../HTML/thanhtoan.php?id=${
-            item.id_sp
-          }" class="btn_them">THANH TOÁN NGAY </a>
+          <button class="thanhtoan" type="submit">
+            TIẾN HÀNH THANH TOÁN
+          </button>
         </form>
       </div>
                 `;

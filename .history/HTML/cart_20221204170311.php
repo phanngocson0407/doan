@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CSS/CN_BanHang.css" />
-    <link rel="stylesheet" href="../CSS/sanpham.css" />
+    <link rel="stylesheet" href="../CSS/cart.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -21,7 +21,7 @@
     <title>Document</title>
   </head>
   <body>
-    <?php $id_sp=$_GET['id']; ?>
+    <?php $id_sp=$_GET['id']??"";  ?>
     <input type="hidden" id="id_sp" value="<?php echo $id_sp ?>">
     <div id="main">
       <header id="header">
@@ -39,13 +39,15 @@
                 >
               </li>
               <li>
-                <a href="Project_CN_BanHang.php #product" class="sub_menu_name"
+                <a
+                  href=" Project_CN_BanHang.php #product "
+                  class="sub_menu_name"
                   >Sản phẩm</a
                 >
               </li>
               <li>
                 <a
-                  href="Project_CN_BanHang.php #post-list"
+                  href="Project_CN_BanHang.php  #post-list"
                   class="sub_menu_name"
                   >Blog</a
                 >
@@ -80,41 +82,14 @@
           </div>
         </nav>
       </header>
-      <div class="content" id="chitiet_sp">
-        <form action="../HTML/cart.php">
-          <div class="product" >
-            <div class="product_img">
-              <img src="../images/sanpham/hmk-03-1.jpg" alt="03" />
-            </div>
-            <div class="product_form">
-              <div class="product_name">
-                <h1>Mắt kính cận-kinh loại– HMK15</h1>
-              </div>
-              <div class="border"></div>
-
-              <div class="product_price margin15"><p>Giá: 100000đ</p></div>
-
-              <div class="product_color margin15">
-                <p>Màu sắc</p>
-                <select name="" id="" class="color_more">
-                  <option value="hong">Hồng</option>
-                  <option value="bac">Bạc</option>
-                  <option value="den">Đen</option>
-                </select>
-              </div>
-              <div class="product_amount margin15">
-                <button class="minus_btn" onclick="handleMinus()">
-                  <i class="fa-solid fa-minus"></i>
-                </button>
-                <input type="text" name="amount" id="amount" value="1" />
-                <button class="plus_btn" onclick="handlePlus()">
-                  <i class="fa-solid fa-plus"></i>
-                </button>
-              </div>
-              <button class="btn_them"  type="submit">THÊM VÀO GIỎ HÀNG</button>
-            </div>
-          </div>
-        </form>
+      <div class="shopping_cart">
+        <div class="cart_none">
+          <p>Chưa có sản phẩm nào trong giỏ hàng.</p>
+          <a href="Project_CN_BanHang.html">Quay trở lại trang chủ</a>
+        </div>
+        <div class="cart_content" id="cart-shop">
+           
+        </div>
       </div>
       <footer>
         <ul class="footer-list">
@@ -173,7 +148,7 @@
               <a href=""><img src="../PICTURE/mShopee.webp" alt="" /></a>
             </div>
           </li>
-        </ul> 
+        </ul>
       </footer>
       <div class="copy-right">
         <div class="copy-title">Copyright 2022 © <span>HMK Eyewear</span></div>
@@ -201,7 +176,7 @@
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
     <script src="..//JS/CN_BanHang.js"></script>
+    <script src="../JS/cart.js?v2"></script>
     <script src="../JS/amount.js"></script>
-    <script src="../JS/sanpham_chitiet.js?v5"></script>
   </body>
 </html>

@@ -71,7 +71,7 @@
             <a href="../HTML/dangnhap.php" class="user js-btn-user">
               <i class="fa-solid fa-user"></i>
             </a>
-            <a class="cart" href="../HTML/cart.php"
+            <a class="cart" href="cart.html"
               ><i class="fa-solid fa-cart-shopping"></i>
               <ul class="cart_more">
                 <li>Chưa có sản phẩm nào trong giỏ hàng</li>

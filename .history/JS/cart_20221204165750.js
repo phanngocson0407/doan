@@ -20,7 +20,7 @@ function show_sanpham() {
         <h2>SHOPPING CART</h2>
       </div>
       <div class="cart_table">
-        <form action="../HTML/thanhtoan.php">
+        <form action="../HTML/thanhtoan.html">
           <table cellspacing="10">
             <thead>
               <tr>
@@ -53,9 +53,9 @@ function show_sanpham() {
               PHẨM</a
             >
           </div>
-          <a class="thanhtoan_cart" href="../HTML/thanhtoan.php?id=${
-            item.id_sp
-          }" class="btn_them">THANH TOÁN NGAY </a>
+          <button class="thanhtoan" type="submit">
+            TIẾN HÀNH THANH TOÁN
+          </button>
         </form>
       </div>
                 `;

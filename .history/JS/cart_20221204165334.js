@@ -20,7 +20,7 @@ function show_sanpham() {
         <h2>SHOPPING CART</h2>
       </div>
       <div class="cart_table">
-        <form action="../HTML/thanhtoan.php">
+        <form action="../HTML/thanhtoan.html">
           <table cellspacing="10">
             <thead>
               <tr>
@@ -37,7 +37,15 @@ function show_sanpham() {
                   <p>${item.tensanpham}-${item.chat_lieu}– ${item.masanpham}</p>
                 </td>
                 <td>${item.gia}đ</td>
-                <td><input type="number" min=1 name="soluong" id="" /></td>
+                <td><div class="product_amount margin15">
+                <button class="minus_btn" onclick="handleMinus()">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+                <input type="text" name="amount" id="amount" value="1" />
+                <button class="plus_btn" onclick="handlePlus()">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div></td>
                 <td>${item.gia}đ</td>
               </tr>
 
@@ -53,9 +61,9 @@ function show_sanpham() {
               PHẨM</a
             >
           </div>
-          <a class="thanhtoan_cart" href="../HTML/thanhtoan.php?id=${
-            item.id_sp
-          }" class="btn_them">THANH TOÁN NGAY </a>
+          <button class="thanhtoan" type="submit">
+            TIẾN HÀNH THANH TOÁN
+          </button>
         </form>
       </div>
                 `;

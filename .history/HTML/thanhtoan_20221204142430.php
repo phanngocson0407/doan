@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CSS/CN_BanHang.css" />
-    <link rel="stylesheet" href="../CSS/sanpham.css" />
+    <link rel="stylesheet" href="../CSS/thanhtoan.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -21,8 +21,6 @@
     <title>Document</title>
   </head>
   <body>
-    <?php $id_sp=$_GET['id']; ?>
-    <input type="hidden" id="id_sp" value="<?php echo $id_sp ?>">
     <div id="main">
       <header id="header">
         <nav class="container">
@@ -39,13 +37,13 @@
                 >
               </li>
               <li>
-                <a href="Project_CN_BanHang.php #product" class="sub_menu_name"
+                <a href="Project_CN_BanHang.php #product " class="sub_menu_name"
                   >Sản phẩm</a
                 >
               </li>
               <li>
                 <a
-                  href="Project_CN_BanHang.php #post-list"
+                  href="Project_CN_BanHang.php  #post-list"
                   class="sub_menu_name"
                   >Blog</a
                 >
@@ -80,41 +78,85 @@
           </div>
         </nav>
       </header>
-      <div class="content" id="chitiet_sp">
-        <form action="../HTML/cart.php">
-          <div class="product" >
-            <div class="product_img">
-              <img src="../images/sanpham/hmk-03-1.jpg" alt="03" />
+      <div class="checkout">
+        <div class="checkout_name">
+          <h2>THÔNG TIN THANH TOÁN</h2>
+        </div>
+        <div class="border"></div>
+        <div class="form_checkout">
+          <form action="">
+            <div class="info_customer">
+              <p>
+                <label for="fullname"
+                  >Họ và tên <abbr title="Bắt buộc">*</abbr></label
+                >
+                <span><input type="text" name="fullname" /></span>
+              </p>
+              <p>
+                <label for="city"
+                  >Tỉnh/Thành Phố <abbr title="Bắt buộc">*</abbr></label
+                >
+                <span><input type="text" name="city" /></span>
+              </p>
+              <p>
+                <label for="address"
+                  >Địa chỉ <abbr title="Bắt buộc">*</abbr></label
+                >
+                <span><input type="text" name="address" /></span>
+              </p>
+              <p>
+                <label for="phone"
+                  >Số điện thoại <abbr title="Bắt buộc">*</abbr></label
+                >
+                <span><input type="number" name="phone" /></span>
+              </p>
+              <p>
+                <label for="mail"
+                  >Địa chỉ Email <abbr title="Bắt buộc">*</abbr></label
+                >
+                <span><input type="email" name="mail" /></span>
+              </p>
+              <div class="oder">
+                <h3>Thông tin bổ sung</h3>
+                <p>
+                  <label for="oder_cmt">Ghi chú đơn hàng (Tùy chọn)</label>
+                  <textarea
+                    name="oder_cmt"
+                    id=""
+                    placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."
+                    rows="5"
+                    cols="60"
+                  ></textarea>
+                </p>
+              </div>
             </div>
-            <div class="product_form">
-              <div class="product_name">
-                <h1>Mắt kính cận-kinh loại– HMK15</h1>
-              </div>
-              <div class="border"></div>
 
-              <div class="product_price margin15"><p>Giá: 100000đ</p></div>
-
-              <div class="product_color margin15">
-                <p>Màu sắc</p>
-                <select name="" id="" class="color_more">
-                  <option value="hong">Hồng</option>
-                  <option value="bac">Bạc</option>
-                  <option value="den">Đen</option>
-                </select>
-              </div>
-              <div class="product_amount margin15">
-                <button class="minus_btn" onclick="handleMinus()">
-                  <i class="fa-solid fa-minus"></i>
-                </button>
-                <input type="text" name="amount" id="amount" value="1" />
-                <button class="plus_btn" onclick="handlePlus()">
-                  <i class="fa-solid fa-plus"></i>
-                </button>
-              </div>
-              <button class="btn_them"  type="submit">THÊM VÀO GIỎ HÀNG</button>
+            <div class="info_product">
+              <h3>Đơn hàng của bạn</h3>
+              <table cellspacing="10">
+                <thead>
+                  <tr>
+                    <th>SẢN PHẨM</th>
+                    <th>TẠM TÍNH</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Gọng kính Kim Loại - KL2302 - ĐEN HỒNG × 6</td>
+                    <td>960,000₫</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td>Tổng</td>
+                    <td>960,000₫</td>
+                  </tr>
+                </tfoot>
+              </table>
             </div>
-          </div>
-        </form>
+            <button class="btn_dathang" type="submit">ĐẶT HÀNG</button>
+          </form>
+        </div>
       </div>
       <footer>
         <ul class="footer-list">
@@ -173,7 +215,7 @@
               <a href=""><img src="../PICTURE/mShopee.webp" alt="" /></a>
             </div>
           </li>
-        </ul> 
+        </ul>
       </footer>
       <div class="copy-right">
         <div class="copy-title">Copyright 2022 © <span>HMK Eyewear</span></div>
@@ -201,7 +243,5 @@
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
     <script src="..//JS/CN_BanHang.js"></script>
-    <script src="../JS/amount.js"></script>
-    <script src="../JS/sanpham_chitiet.js?v5"></script>
   </body>
 </html>
