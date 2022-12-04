@@ -35,7 +35,7 @@ function show_sanpham() {
 
                 <div class="product_price margin15"><p>${item.gia}đ</p></div>
                 
-                <input type="text" name="soluong" id="amounts"   />
+                <input type="text" name="soluong" id="amounts" value="1" />
                  
                 <a href="../HTML/cart.php?id=${
                   item.id_sp

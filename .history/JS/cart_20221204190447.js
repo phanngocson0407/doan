@@ -37,9 +37,12 @@ function show_sanpham() {
                   <img src="${link_web + item.img_sp}" alt="03" />
                   <p>${item.tensanpham}-${item.chat_lieu}– ${item.masanpham}</p>
                 </td>
+                `;
+
+        `
                 
                 <td>${item.gia}đ</td>
-                <td> ${aaa} </td>
+                <td>  </td>
                 <td>${item.gia}đ</td>
               </tr>
 
@@ -55,9 +58,7 @@ function show_sanpham() {
               PHẨM</a
             >
           </div>
-          <a class="thanhtoan_cart" href="../HTML/thanhtoan.php?id=${
-            item.id_sp
-          }" class="btn_them">THANH TOÁN NGAY </a>
+          <a class="thanhtoan_cart" href="../HTML/thanhtoan.php?id=${item.id_sp}" class="btn_them">THANH TOÁN NGAY </a>
         </form>
       </div>
                 `;

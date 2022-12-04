@@ -1,5 +1,8 @@
 let link_web = "http://localhost/doan/";
 
+let amountss = document.forms["sanpham_form"]["soluong"];
+alert(amountss);
+
 function show_sanpham() {
   $.ajax({
     url: "../PHP/sp_controller.php",

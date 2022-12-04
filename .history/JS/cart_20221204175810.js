@@ -1,5 +1,5 @@
 let link_web = "http://localhost/doan/";
-
+let soluong = document.getElementsByClassName("soluong");
 function show_sanpham() {
   $.ajax({
     url: "../PHP/sp_controller.php",
@@ -37,15 +37,14 @@ function show_sanpham() {
                   <img src="${link_web + item.img_sp}" alt="03" />
                   <p>${item.tensanpham}-${item.chat_lieu}– ${item.masanpham}</p>
                 </td>
-                
                 <td>${item.gia}đ</td>
-                <td> ${aaa} </td>
+                <td> soluong</td>
                 <td>${item.gia}đ</td>
               </tr>
 
               <tr>
                 <td>Tổng:</td>
-                    <td>$  </td>
+                    <td>${item.gia}* ${soluong}</td>
               </tr>
             </tbody>
           </table>

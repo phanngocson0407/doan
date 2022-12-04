@@ -37,9 +37,8 @@ function show_sanpham() {
                   <img src="${link_web + item.img_sp}" alt="03" />
                   <p>${item.tensanpham}-${item.chat_lieu}– ${item.masanpham}</p>
                 </td>
-                
                 <td>${item.gia}đ</td>
-                <td> ${aaa} </td>
+                <td>  </td>
                 <td>${item.gia}đ</td>
               </tr>
 

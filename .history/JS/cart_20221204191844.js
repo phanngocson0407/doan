@@ -1,5 +1,10 @@
 let link_web = "http://localhost/doan/";
 
+let aaa = document.getElementById("amounts");
+
+// let amountss = document.forms["sanpham_form"]["soluong"].value;
+alert(amountss);
+
 function show_sanpham() {
   $.ajax({
     url: "../PHP/sp_controller.php",
@@ -39,7 +44,7 @@ function show_sanpham() {
                 </td>
                 
                 <td>${item.gia}đ</td>
-                <td> ${aaa} </td>
+                <td>  </td>
                 <td>${item.gia}đ</td>
               </tr>
 

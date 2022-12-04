@@ -1,5 +1,5 @@
 let link_web = "http://localhost/doan/";
-
+const elements = document.getElementsByTagName("soluong");
 function show_sanpham() {
   $.ajax({
     url: "../PHP/sp_controller.php",
@@ -20,7 +20,7 @@ function show_sanpham() {
             <div class="content_name">
                 <h2>Chi tiết sản phẩm</h2>
             </div>
-            <form name="sanpham_form" method="post">
+            <form>
             <div class="product" >
                 <div class="product_img">
                 <img src="${link_web + item.img_sp}" alt="03" />
@@ -35,7 +35,7 @@ function show_sanpham() {
 
                 <div class="product_price margin15"><p>${item.gia}đ</p></div>
                 
-                <input type="text" name="soluong" id="amounts"   />
+                <input type="text" name="soluong" id="amounts" value="1" />
                  
                 <a href="../HTML/cart.php?id=${
                   item.id_sp
