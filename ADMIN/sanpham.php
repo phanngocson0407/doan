@@ -232,7 +232,9 @@
             />
             <br />
             <input type="file" id="edit_hinh_sanpham" onchange="select_img('edit_hinh_sanpham','hienhinhanh')">
-            <span id="hienhinhanh"></span>
+            <span id="hienhinhanh">
+              
+            </span>
             <br />
             <button type="button" onclick="suasanpham()" class="btn btn-primary">Cập nhật</button>
             <button type="button" class="btn btn-primary" data-dismiss="modal" id="dong_suasp">Đóng</button>
@@ -292,6 +294,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-<script src="../JS/sanpham.js?v5"></script>
+<script src="../JS/sanpham.js?v6"></script>
 </body>
 </html>

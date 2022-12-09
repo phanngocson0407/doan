@@ -31,7 +31,7 @@
               <label for="input-password">Mật khẩu *</label>
               <input type="password" id="input-password" name="password" />
               
-<?php
+            <?php
             session_start();
              $err=$_SESSION["err"]??"";
              ?>

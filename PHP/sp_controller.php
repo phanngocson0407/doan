@@ -135,9 +135,9 @@ switch($loaiquanly)
         else{
             return_err("Điền chất liệu sản phẩm");
         }
-        if(isset($_FILES['hinh_sanpham']))
+        if(isset($_FILES['edit_hinh_sanpham']))
         {
-            $link_hinhmoithem=them_hinhanh("hinh_sanpham","images/sanpham/");
+            $link_hinhmoithem=them_hinhanh("edit_hinh_sanpham","images/sanpham/");
         }
         else{
             return_err("Thêm hình vào ");

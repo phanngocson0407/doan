@@ -21,7 +21,7 @@ else{
 
 if(isset($_REQUEST['password']) AND !empty($_REQUEST['password']))
 {
-    $password=$_REQUEST['password'];
+    $password=md5($_REQUEST['password']);
 }
 else{
     $_SESSION['err']="Không được bỏ trống";
