@@ -33,7 +33,8 @@
               
             <?php
             session_start();
-             $err=$_SESSION["err"]??"";
+             $err=$_SESSION["err"]?$_SESSION["err"]:"";
+             if(isset($_SESSION['tenkhachhang'])) header("Location: ../HTML/Project_CN_BanHang.php");
              ?>
             <small style="color:red"><?php echo $err;?></small>
             </div>
