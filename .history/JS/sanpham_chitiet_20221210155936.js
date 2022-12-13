@@ -36,15 +36,7 @@ function show_sanpham() {
 
                 <div class="product_price margin15"><p>${item.gia}đ</p></div>
                 
-                <div class="product_amount margin15">
-                <button class="minus_btn" onclick="handleMinus()">
-                  <i class="fa-solid fa-minus"></i>
-                </button>
-                <input type="text" name="amount" id="amount" value="1" />
-                <button class="plus_btn" onclick="handlePlus()">
-                  <i class="fa-solid fa-plus"></i>
-                </button>
-              </div>
+                <input type="text" name="soluong" id="amounts"   />
                  
                 <a href="../HTML/cart.php?id=${
                   item.id_sp

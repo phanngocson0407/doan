@@ -202,6 +202,6 @@
     ></script>
     <script src="..//JS/CN_BanHang.js"></script>
     <script src="../JS/amount.js"></script>
-    <script src="../JS/sanpham_chitiet.js?v6"></script>
+    <!-- <script src="../JS/sanpham_chitiet.js?v5"></script> -->
   </body>
 </html>

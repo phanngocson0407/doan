@@ -1,10 +1,6 @@
 let link_web = "http://localhost/doan/";
-
-function myFunction() {
-  const amounts = document.getElementsByName("soluong").values;
-  console.log(amounts);
-}
-myFunction();
+const amounts = document.getElementsByName("soluong").values;
+console.log(amounts);
 function show_sanpham() {
   $.ajax({
     url: "../PHP/sp_controller.php",
