@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -55,10 +58,23 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </form>
-
-            <a href="../HTML/dangnhap.php" class="user js-btn-user">
+            <?php
+                if (isset($_SESSION['tenkhachhang'])) {
+                ?>
+                <div class="d-flex justify-content-center align-items-center gap-2">
+                  <a href="#" class=""><?= $_SESSION['tenkhachhang']; ?></a>
+                  <a class="btn btn-warning ml-2" href="../HTML/dangxuat.php">Log out</a>
+                </div>
+                <?php
+                } else {
+                ?>
+                <a href="../HTML/dangnhap.php"><i class="fa fa-user"></i> Login</a>
+                <?php
+                }
+                ?>
+            <!-- <a href="../HTML/dangnhap.php" class="user js-btn-user">
               <i class="fa-solid fa-user"></i>
-            </a>
+            </a> -->
             <a class="cart" href="../HTML/cart.php"
               ><i class="fa-solid fa-cart-shopping"></i>
               <ul class="cart_more">

@@ -11,11 +11,12 @@ else{
 
 if(isset($_REQUEST['password']) AND !empty($_REQUEST['password']))
 {
-    $password=$_REQUEST['password'];
+    $password=md5($_REQUEST['password']);
 }
 else{
     return  header("Location: ../HTML/dangnhap.php");
 }
+
 
 
 
@@ -24,10 +25,11 @@ $sql="SELECT *
 ";
 $result = db_qr($sql);
 $num= db_nums($result);
+$dataUser = $result ->fetch_object();
 if($num>0)
 {   
+    $_SESSION['tenkhachhang']= $dataUser->tenkhachhang;
     $_SESSION['err']="";
-    
     return header("Location: ../HTML/Project_CN_BanHang.php");
 
 }
