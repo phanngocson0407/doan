@@ -1,0 +1,49 @@
+.back_product a {
+  text-decoration: none;
+  padding: 10px;
+  border: #d38566 solid 1px;
+  color: #d38566;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+}
+.back_product a:hover {
+  background-color: #d38566;
+  color: #fff;
+}
+#content {
+  text-align: center;
+}
+h1 {
+  color: #d38566;
+}
+.tick,
+.thanks {
+  color: #00dd00;
+}
+.tick {
+  font-size: 70px;
+  font-weight: 700;
+  margin: 70px 0 20px 0;
+}
+.thanks {
+  margin: 20px 0;
+  font-size: 30px;
+  font-weight: 900;
+}
+.back_product {
+  margin: 100px 0;
+}
+.border {
+  border-top: #d38566 solid 5px;
+
+  margin: 35px 0;
+  margin: 0 165px;
+}
+.content_sup p {
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: #d38566;
+  margin: 50px 165px;
+}

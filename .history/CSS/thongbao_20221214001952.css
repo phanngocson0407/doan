@@ -1,0 +1,16 @@
+.back_product a {
+  text-decoration: none;
+  padding: 10px;
+  border: #d38566 solid 1px;
+  color: #d38566;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+}
+.back_product a:hover {
+  background-color: #d38566;
+  color: #fff;
+}
+#content {
+  text-align: center;
+}

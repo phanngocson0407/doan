@@ -1,0 +1,108 @@
+.cart_none {
+  text-align: center;
+  margin: 100px 165px;
+  display: none;
+}
+.cart_none p {
+  color: #d38566;
+  margin-bottom: 50px;
+}
+.cart_none a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #d38566;
+  padding: 10px;
+  font-weight: 600;
+}
+.cart_none a:hover {
+  opacity: 0.8;
+}
+.cart_content {
+  margin: 0 165px;
+}
+.product_amount input {
+  width: 40px;
+  text-align: center;
+}
+.product_amount button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.product_amount button:hover {
+  background-color: #cccccc;
+}
+
+.cart_table tbody td img {
+  width: 80px;
+  height: 80px;
+}
+.cart_table tbody td img,
+p {
+  float: left;
+}
+.cart_table tbody td p {
+  padding-top: 25px;
+}
+table {
+  border-bottom: #cccccc 2px solid;
+  margin-bottom: 47px;
+}
+.back_product,
+.thanhtoan {
+  display: inline;
+
+  margin: 20px 40px;
+}
+.back_product a {
+  text-decoration: none;
+  padding: 10px;
+  border: #d38566 solid 1px;
+  color: #d38566;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+}
+.thanhtoan_cart {
+  text-decoration: none;
+  padding: 10px;
+  border: #d38566 solid 1px;
+  color: #d38566;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+}
+.thanhtoan_cart:hover {
+  background-color: #d38566;
+  color: #fff;
+}
+.back_product a:hover {
+  background-color: #d38566;
+  color: #fff;
+}
+.back_product a i {
+  margin-right: 10px;
+}
+.thanhtoan {
+  padding: 10px;
+  border: #d38566 solid 1px;
+  color: #d38566;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  background-color: #fff;
+}
+.thanhtoan:hover {
+  background-color: #d38566;
+  color: #fff;
+}
+.shopping_cart {
+  margin: 100px 0;
+}
+a {
+  text-decoration: none !important;
+}
+.btn_them {
+  background-color: #d38566 !important;
+  color: #fff;
+}

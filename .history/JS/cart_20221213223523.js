@@ -1,0 +1,75 @@
+let link_web = "http://localhost/doan/";
+
+function myFunction() {
+  const amounts = document.getElementsByName("soluong").values;
+  console.log(amounts);
+}
+myFunction();
+function show_sanpham() {
+  $.ajax({
+    url: "../PHP/sp_controller.php",
+    type: "POST",
+    data: {
+      loaiquanly: "list_sp",
+      id_sp: $("#id_sp").val(),
+    },
+    dataType: "json",
+    headers: {
+      Authorization: "Basic ",
+    },
+    success: function (response) {
+      console.log(response);
+      let output = "";
+      $.each(response, function (k, item) {
+        output += `
+        <div class="cart_name">
+        <h2>SHOPPING CART</h2>
+      </div>
+      <div class="cart_table">
+        <form action="../HTML/thanhtoan.php">
+          <table cellspacing="10">
+            <thead>
+              <tr>
+                <th>SẢN PHẨM</th>
+                <th>GIÁ</th>
+ 
+                <th>TẠM TÍNH</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <img src="${link_web + item.img_sp}" alt="03" />
+                  <p>${item.tensanpham}-${item.chat_lieu}– ${item.masanpham}</p>
+                </td>
+                <td>${item.gia} vnđ</td>
+  
+                <td>${item.gia} vnđ</td>
+              </tr>
+
+              <tr>
+                <td>Tổng:</td>  
+                    <td>${item.gia} vnđ  </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="back_product">
+            <a href="Project_CN_BanHang.php #product "
+              ><i class="fa-solid fa-arrow-left"></i>TIẾP TỤC XEM SẢN
+              PHẨM</a
+            >
+          </div>
+          <a class="thanhtoan_cart" href="../HTML/thanhtoan.php?id=${
+            item.id_sp
+          }" class="btn_them">THANH TOÁN NGAY </a>
+        </form>
+      </div>
+                `;
+      });
+      $("#cart-shop").html(output);
+    },
+  });
+}
+$(document).ready(function () {
+  show_sanpham();
+});
