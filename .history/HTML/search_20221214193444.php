@@ -8,7 +8,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CSS/CN_BanHang.css" />
-    <link rel="stylesheet" href="../CSS/cart.css" />
+    <link rel="stylesheet" href="../CSS/address.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -24,8 +24,6 @@ session_start();
     <title>Document</title>
   </head>
   <body>
-    <?php $id_sp=$_GET['id']??"";  ?>
-    <input type="hidden" id="id_sp" value="<?php echo $id_sp ?>" />
     <div id="main">
       <header id="header">
         <nav class="container">
@@ -42,9 +40,7 @@ session_start();
                 >
               </li>
               <li>
-                <a
-                  href=" Project_CN_BanHang.php #product "
-                  class="sub_menu_name"
+                <a href="Project_CN_BanHang.php #product " class="sub_menu_name"
                   >Sản phẩm</a
                 >
               </li>
@@ -66,9 +62,9 @@ session_start();
             </ul>
           </div>
           <div class="header_user">
-          <form action="../HTML/search.php" id="search-box" method="get">
-              <input type="text" id="search-text" name="timkiem" placeholder="Nhập mã sản phẩm...." />
-              <button  type="submit" id="search-btn" name="btn">
+            <form action="" id="search-box">
+              <input type="text" id="search-text" placeholder="Tìm kiếm...." />
+              <button id="search-btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </form>
@@ -90,12 +86,36 @@ session_start();
           </div>
         </nav>
       </header>
-      <div class="shopping_cart">
-        <div class="cart_none">
-          <p>Chưa có sản phẩm nào trong giỏ hàng.</p>
-          <a href="Project_CN_BanHang.html">Quay trở lại trang chủ</a>
-        </div>
-        <div class="cart_content" id="cart-shop"></div>
+      <div class="sanphamnoibat">
+        <?php
+        while($rowtimkiem = mysqli_fetch_array($query_tiemkiem)){
+        ?>
+        <form method="post" >
+        <div class="product-item" >
+                  <div class="product-top">
+                    <a href="chitietsp.php?id=${
+                      item.id_sp
+                    }" class="product-thumb">
+                      <img height="50px" width="100%" class="img-fist" src="../<?php echo $rowtimkiem['img_sp'] ?>" />
+                    </a>
+                    <a href="chitietsp.php?id=${
+                      item.id_sp
+                    }"   class="buynow">XEM NHANH</a>
+                  </div>
+                  <div class="product-info">
+                    <a href="" class="product-name"><?php echo $rowtimkiem['tensanpham'] ?>- <?php echo $rowtimkiem['chat_lieu'] ?>– <?php echo $rowtimkiem['masanpham'] ?></a>
+                    <div>
+                      <p class="product-price"><?php echo $rowtimkiem['gia'] ?>đ</p>
+                      <a href="chitietsp.php?id=${
+                        item.id_sp
+                      }"   class="product-more">MUA NGAY</a>
+                    </div>
+                  </div>
+                </div>
+        </form>
+        <?php
+        }
+        ?>
       </div>
       <footer>
         <ul class="footer-list">
@@ -182,7 +202,5 @@ session_start();
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
     <script src="..//JS/CN_BanHang.js"></script>
-    <script src="../JS/cart.js?v4"></script>
- 
   </body>
 </html>

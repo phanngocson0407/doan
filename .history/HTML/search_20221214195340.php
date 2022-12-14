@@ -1,6 +1,18 @@
 <?php
 session_start();
 ?>
+<?php
+    include('../PHP/config.php');
+    if(isset($_GET['btn'])){
+        $tukhoa = $_GET['timkiem'];
+        $sql_timkiem = "SELECT *FROM `san_pham` WHERE `masanpham` LIKE '%$tukhoa%' ";
+        $query_tiemkiem = mysqli_query($conn, $sql_timkiem);
+    }else{
+        $tukhoa="";
+        $sql_timkiem = "SELECT *FROM `san_pham` WHERE `masanpham`  limit 5";
+        $query_tiemkiem = mysqli_query($conn, $sql_timkiem);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +20,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CSS/CN_BanHang.css" />
-    <link rel="stylesheet" href="../CSS/cart.css" />
+    <link rel="stylesheet" href="../CSS/search.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -24,8 +36,7 @@ session_start();
     <title>Document</title>
   </head>
   <body>
-    <?php $id_sp=$_GET['id']??"";  ?>
-    <input type="hidden" id="id_sp" value="<?php echo $id_sp ?>" />
+    
     <div id="main">
       <header id="header">
         <nav class="container">
@@ -42,9 +53,7 @@ session_start();
                 >
               </li>
               <li>
-                <a
-                  href=" Project_CN_BanHang.php #product "
-                  class="sub_menu_name"
+                <a href="Project_CN_BanHang.php #product " class="sub_menu_name"
                   >Sản phẩm</a
                 >
               </li>
@@ -66,9 +75,9 @@ session_start();
             </ul>
           </div>
           <div class="header_user">
-          <form action="../HTML/search.php" id="search-box" method="get">
-              <input type="text" id="search-text" name="timkiem" placeholder="Nhập mã sản phẩm...." />
-              <button  type="submit" id="search-btn" name="btn">
+            <form action="" id="search-box">
+              <input type="text" id="search-text" placeholder="Tìm kiếm...." />
+              <button id="search-btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </form>
@@ -90,12 +99,94 @@ session_start();
           </div>
         </nav>
       </header>
-      <div class="shopping_cart">
-        <div class="cart_none">
-          <p>Chưa có sản phẩm nào trong giỏ hàng.</p>
-          <a href="Project_CN_BanHang.html">Quay trở lại trang chủ</a>
-        </div>
-        <div class="cart_content" id="cart-shop"></div>
+      <div class="sanphamnoibat">
+        <?php
+        while($rowtimkiem = mysqli_fetch_array($query_tiemkiem)){
+        ?>
+        <form method="post"  action="../HTML/thanhtoan.php">
+        <div class="product-item" >
+                  <div class="product-top" style="display: inline-block; text-align: center; ">
+                    <a href="" class="product-thumb" style="display: inline-block;">
+                      <img height="100px" width="100px"   class="img-fist" src="../<?php echo $rowtimkiem['img_sp'] ?>" />
+                    </a>
+                    <a href=""   class="buynow">XEM NHANH</a>
+                  </div>
+                  <div class="product-info">
+                    <a href="" class="product-name"><?php echo $rowtimkiem['tensanpham'] ?>- <?php echo $rowtimkiem['chat_lieu'] ?>– <?php echo $rowtimkiem['masanpham'] ?></a>
+                    <div>
+                      <p class="product-price"><?php echo $rowtimkiem['gia'] ?>đ</p>
+                      <a href=" ../HTML/thanhtoan.php"   class="product-more">MUA NGAY</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="description">
+                <div class="description_name">
+                <h2>Mô tả</h2>
+                </div>
+                <div class="description_info">
+                <p >– Tên sản phẩm: <b><?php echo $rowtimkiem['tensanpham'] ?></b></p>
+                <p>– Mã sản phẩm: <b><?php echo $rowtimkiem['masanpham'] ?></b></p>
+                <p>– Chất liệu: <b><?php echo $rowtimkiem['chat_lieu'] ?></b></p>
+
+                <ul>
+                    <li>
+                    Gọng kính <?php echo $rowtimkiem['chat_lieu'] ?> tổng hợp chống gỉ sét. An toàn tuyệt đối.
+                    </li>
+                    <li>
+                    Độ bền màu và tính đàn hồi cao. Ốc vặn được gia công kỹ lưỡng và
+                    cẩn thận.
+                    </li>
+                    <li>
+                    Đệm mũi êm ái, tạo cảm giác dễ chịu khi đeo, cân đối giữa hai bên
+                    thái dương, mắt và sống mũi.
+                    </li>
+                    <li>Càng kính chắc chắn, không gây ra vết hằn khó chịu trên da.</li>
+                    <li>Dễ phối đồ với nhiều phong cách khác nhau.</li>
+                    <li>Phù hợp với nhiều khuôn mặt, cho cả nam và nữ.</li>
+                </ul>
+                <p>
+                    – HMK eyewear cam kết 100% sản phẩm là ảnh thật shop tự chụp, khách
+                    hàng có thể yên tâm về chất lượng sản phẩm. Nghiêm cấm mọi hành vi
+                    sao chép hình ảnh.
+                </p>
+                <p>
+                    – Vận chuyển từ 1-2 ngày đối với HCM và 3-4 ngày đối với các tỉnh
+                    ngoại thành.
+                </p>
+                <p>
+                    – Nếu có bất kỳ thắc mắc nào về thông tin sản phẩm hoặc vấn đề khác
+                    xin quý khách vui lòng nhắn tin hoặc gọi điện qua số hotline: 1900
+                    9368 để được hỗ trợ tư vấn tốt nhất.
+                </p>
+                <span><b>– Bộ sản phẩm của HMK Eyewear bao gồm: </b></span>
+                <ul>
+                    <li>Mắt Kính</li>
+                    <li>Hộp Đựng Kính</li>
+                    <li>Khăn Lau Kính.</li>
+                </ul>
+                <span><b>– Chính sách bảo hành của HMK: </b></span>
+                <ul>
+                    <li>
+                    Đổi hàng trong vòng 3 ngày kể từ ngày nhận hàng nếu lỗi do NSX
+                    (với điều kiện Giá trị sản phẩm đổi ngang bằng hoặc cao hơn giá
+                    trị sản phẩm cũ).
+                    </li>
+                    <li>
+                    HMK chịu trách nhiệm bảo hành kính mắt trong vòng 7 ngày kể từ
+                    ngày cắt kính.
+                    </li>
+                    <li>
+                    Trong quá trình đeo có bị lỏng ốc, Shop sẽ hỗ trợ vặn vít miễn phí
+                    cho khách.
+                    </li>
+                    <li>Vệ sinh miễn phí kính định kỳ.</li>
+                </ul>
+                </div>
+            </div>
+        </form>
+        <?php
+        }
+        ?>
       </div>
       <footer>
         <ul class="footer-list">
@@ -182,7 +273,5 @@ session_start();
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
     <script src="..//JS/CN_BanHang.js"></script>
-    <script src="../JS/cart.js?v4"></script>
- 
   </body>
 </html>

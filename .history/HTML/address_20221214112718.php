@@ -8,7 +8,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CSS/CN_BanHang.css" />
-    <link rel="stylesheet" href="../CSS/cart.css" />
+    <link rel="stylesheet" href="../CSS/address.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -24,8 +24,6 @@ session_start();
     <title>Document</title>
   </head>
   <body>
-    <?php $id_sp=$_GET['id']??"";  ?>
-    <input type="hidden" id="id_sp" value="<?php echo $id_sp ?>" />
     <div id="main">
       <header id="header">
         <nav class="container">
@@ -42,9 +40,7 @@ session_start();
                 >
               </li>
               <li>
-                <a
-                  href=" Project_CN_BanHang.php #product "
-                  class="sub_menu_name"
+                <a href="Project_CN_BanHang.php #product " class="sub_menu_name"
                   >Sản phẩm</a
                 >
               </li>
@@ -66,9 +62,9 @@ session_start();
             </ul>
           </div>
           <div class="header_user">
-          <form action="../HTML/search.php" id="search-box" method="get">
-              <input type="text" id="search-text" name="timkiem" placeholder="Nhập mã sản phẩm...." />
-              <button  type="submit" id="search-btn" name="btn">
+            <form action="" id="search-box">
+              <input type="text" id="search-text" placeholder="Tìm kiếm...." />
+              <button id="search-btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </form>
@@ -90,12 +86,63 @@ session_start();
           </div>
         </nav>
       </header>
-      <div class="shopping_cart">
-        <div class="cart_none">
-          <p>Chưa có sản phẩm nào trong giỏ hàng.</p>
-          <a href="Project_CN_BanHang.html">Quay trở lại trang chủ</a>
+      <div id="content">
+        <div class="hello">
+          <h1>CỬA HÀNG</h1>
+          <p>
+            Hãy ghé thăm cửa hàng của HMK Eyewear để xem trực tiếp các sản phẩm
+            nhé!
+          </p>
         </div>
-        <div class="cart_content" id="cart-shop"></div>
+        <div class="border"></div>
+        <div class="content_add">
+          <p class="add_first">Hệ thống cửa hàng HMK Eyewear:</p>
+          <div class="add">
+            <ul>
+              <li>
+                <p>
+                  <a href="" class="district">Quận 1: </a> 231 Nguyễn Trãi,
+                  P.Nguyễn Cư Trinh, Q.1
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="" class="district">Quận 2: </a> 232 Nguyễn Trãi,
+                  P.Nguyễn Cư Trinh, Q.2
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="" class="district">Quận 3: </a> 233 Nguyễn Trãi,
+                  P.Nguyễn Cư Trinh, Q.3
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="" class="district">Quận 4: </a> 234 Nguyễn Trãi,
+                  P.Nguyễn Cư Trinh, Q.4
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="" class="district">Quận 5: </a> 235 Nguyễn Trãi,
+                  P.Nguyễn Cư Trinh, Q.5
+                </p>
+              </li>
+            </ul>
+          </div>
+          <p class="add_first">
+            Giờ mở cửa: <span>từ 9AM đến 10PM các ngày trong tuần.</span>
+          </p>
+        </div>
+        <div class="border"></div>
+        <div class="content_sup">
+          <p>
+            Nếu quý khách có bất kỳ yêu cầu hay thắc mắc nào hoặc không hài lòng
+            về sản phẩm/dịch vụ của HMK Eyewear, hãy liên hệ với chúng tôi tại
+            matkinhhmk@gmail.com hoặc 19009368.
+          </p>
+        </div>
       </div>
       <footer>
         <ul class="footer-list">
@@ -182,7 +229,5 @@ session_start();
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
     <script src="..//JS/CN_BanHang.js"></script>
-    <script src="../JS/cart.js?v4"></script>
- 
   </body>
 </html>

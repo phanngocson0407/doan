@@ -1,7 +1,18 @@
 <?php
 session_start();
 ?>
- 
+<?php
+    include('../PHP/config.php');
+    if(isset($_GET['btn'])){
+        $tukhoa = $_GET['timkiem'];
+        $sql_timkiem = "SELECT *FROM `san_pham` WHERE `masanpham` LIKE '%$tukhoa%' ";
+        $query_tiemkiem = mysqli_query($conn, $sql_timkiem);
+    }else{
+        $tukhoa="";
+        $sql_timkiem = "SELECT *FROM `san_pham` WHERE `masanpham`  limit 2";
+        $query_tiemkiem = mysqli_query($conn, $sql_timkiem);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -53,8 +64,8 @@ session_start();
             </ul>
           </div>
           <div class="header_user">
-            <form action="../HTML/search.php" id="search-box" method="get">
-              <input type="text" id="search-text" name="timkiem" placeholder="Nhập mã sản phẩm...." />
+            <form action="" id="search-box" method="get">
+              <input type="text" id="search-text" name="timkiem" placeholder="Tìm kiếm...." />
               <button  type="submit" id="search-btn" name="btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>

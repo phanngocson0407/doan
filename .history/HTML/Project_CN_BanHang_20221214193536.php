@@ -53,8 +53,8 @@ session_start();
             </ul>
           </div>
           <div class="header_user">
-            <form action="../HTML/search.php" id="search-box" method="get">
-              <input type="text" id="search-text" name="timkiem" placeholder="Nhập mã sản phẩm...." />
+            <form action="" id="search-box" method="get">
+              <input type="text" id="search-text" name="timkiem" placeholder="Tìm kiếm...." />
               <button  type="submit" id="search-btn" name="btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
