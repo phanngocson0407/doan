@@ -151,30 +151,7 @@ session_start();
                 </p>
               </div>
             </div>
-
-            <div class="info_product" id="product_thanhtoan">
-              <h3>Đơn hàng của bạn</h3>
-              <table cellspacing="10">
-                <thead>
-                  <tr>
-                    <th>SẢN PHẨM</th>
-                    <th>TẠM TÍNH</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Gọng kính Kim Loại - KL2302 - ĐEN HỒNG × 6</td>
-                    <td>960,000₫</td>
-                  </tr>
-                </tbody>
-                <tfoot>
-                  <tr>
-                    <td>Tổng</td>
-                    <td>960,000₫</td>
-                  </tr>
-                </tfoot>
-              </table>
-            </div>
+ 
             <button class="btn_dathang" type="submit">ĐẶT HÀNG</button>
           </form>
         </div>
@@ -264,7 +241,7 @@ session_start();
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
     <script src="..//JS/CN_BanHang.js"></script>
-    <script src="../JS/thanhtoan.js?v5"></script>
+    <script src="../JS/thanhtoan.js?v6"></script>
     <!-- <script src="http://code.jquery.com/jquery-3.4.1.min.js" 
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
 <script type="text/javascript"
