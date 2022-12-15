@@ -46,12 +46,8 @@ body {
   background-color: #d38566;
   color: #fff;
   font-weight: 700;
-  border-radius: 5px;
 }
-#form_dangki button:hover {
-  background-color: #fff;
-  color: #d38566;
-}
+
 #rules {
   font-size: 15px;
   text-align: center;
@@ -76,17 +72,13 @@ a {
   color: red;
   font-family: verdana, Helvetica;
 }
-.backlogin a {
+.back {
   text-decoration: none;
   font-size: 16px;
   font-weight: 700;
   background-color: #d38566;
-  margin: 50px 0;
-  padding: 10px;
-  color: #fff;
-  border-radius: 10px;
 }
-
-.backlogin {
-  margin: 20px 0;
+.dangki:hover {
+  background-color: #fff;
+  color: #d38566;
 }

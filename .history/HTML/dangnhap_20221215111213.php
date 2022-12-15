@@ -31,7 +31,7 @@
                <p><label for="input-password">Mật khẩu *</label></p>
               <input type="password" id="input-password" name="password" />
             <div class="remember">
-              <input type="checkbox" name="" id="cbx-remember_passowrd" />      
+              <input type="checkbox" name="" id="cbx-remember_passowrd" />
               <label for="cbx-remember_passowrd">Ghi nhớ mật khẩu</label>
             </div>
             <button type="submit"  >ĐĂNG NHẬP</button>

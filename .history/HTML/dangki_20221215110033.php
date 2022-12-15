@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../fontawesome-free-6.1.2-web/css/all.css" />
     <link rel="stylesheet" href="../CSS/dangki.css" />
   </head>
   <body>
@@ -53,19 +52,18 @@
             name="email"
             class="margin-top20"
           />
-          <button type="submit" class="margin-top20" class="dangki">Đăng Ký Ngay</button>
+          <button type="submit" class="margin-top20">Đăng Ký Ngay</button>
         </form>
       </div>
-       
+      <div class="backlogin">
+        <a href="../HTML/dangnhap.php" class="back">Đã có tài khoản</a>
+      </div>
       <div class="other margin-top20">
         <p id="rules">
           Bằng cách nhấn Đăng Ký Ngay, bạn đồng ý với
           <span><a href="">Điều Khoản Dịch Vụ</a></span> và
           <span><a href="">Chính Sách Bảo Mật</a></span>
         </p>
-      </div>
-      <div class="backlogin">
-        <a href="../HTML/dangnhap.php" class="back"><i class="fa-solid fa-arrow-left"></i> Đã có tài khoản</a>
       </div>
     </nav>
     <script src="http://code.jquery.com/jquery-3.4.1.min.js" 

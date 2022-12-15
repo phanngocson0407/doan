@@ -56,16 +56,15 @@
           <button type="submit" class="margin-top20" class="dangki">Đăng Ký Ngay</button>
         </form>
       </div>
-       
+      <div class="backlogin">
+        <a href="../HTML/dangnhap.php" class="back"><i class="fa-solid fa-arrow-left"></i> Đã có tài khoản</a>
+      </div>
       <div class="other margin-top20">
         <p id="rules">
           Bằng cách nhấn Đăng Ký Ngay, bạn đồng ý với
           <span><a href="">Điều Khoản Dịch Vụ</a></span> và
           <span><a href="">Chính Sách Bảo Mật</a></span>
         </p>
-      </div>
-      <div class="backlogin">
-        <a href="../HTML/dangnhap.php" class="back"><i class="fa-solid fa-arrow-left"></i> Đã có tài khoản</a>
       </div>
     </nav>
     <script src="http://code.jquery.com/jquery-3.4.1.min.js" 
